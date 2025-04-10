@@ -27,5 +27,7 @@ repertorio/
 | - Canção B           |           |
 | ▸ Bloco 2             |           |
 | - Canção C           |           |
-
 ---
+
+![image](https://github.com/user-attachments/assets/9385883f-fa91-48d6-9d91-d63bf8a93f6d)
+
