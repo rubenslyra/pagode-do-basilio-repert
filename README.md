@@ -148,7 +148,7 @@ server {
 
 ## 👋 Autor
 
-Desenvolvido por [Rubinho Lyra](https://github.com/seuusuario) — integrando música e tecnologia no domínio da harmonia funcional!
+Desenvolvido por [Rubinho Lyra](https://github.com/rubenslyra) — integrando música e tecnologia no domínio da harmonia funcional!
 
 ---
 
