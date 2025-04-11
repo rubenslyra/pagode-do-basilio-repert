@@ -155,5 +155,3 @@ Desenvolvido por [Rubinho Lyra](https://github.com/rubenslyra) — integrando m�
 ## ✉️ Contato
 
 - Instagram: [@rubinholyra](https://instagram.com/rubinholyra)
-- WhatsApp: (27) 99645-5220
-- Email: contato@rubinholyra.com.br
