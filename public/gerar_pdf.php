@@ -1,4 +1,5 @@
 <?php
+require_once 'auth.php';
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../config/db.php';
 
@@ -29,7 +30,7 @@ foreach ($musicas as $m) {
         $bloco_atual = $m['bloco'];
 
         $nomeBloco = mb_convert_encoding($bloco_atual, 'UTF-8', 'auto');
-        $html .= "<h3> " . htmlspecialchars($nomeBloco) . "</h3>";
+        $html .= "<h3> Bloco " . htmlspecialchars($nomeBloco) . "</h3>";
 
         $html .= '<table border="1" cellspacing="0" cellpadding="5" width="100%">
                     <thead>

@@ -1,4 +1,5 @@
 <?php
+require_once 'auth.php';
 require_once '../config/db.php';
 
 // Todas as músicas (para tabela principal)
@@ -11,10 +12,7 @@ $blocos = $pdo->query("SELECT DISTINCT bloco FROM cancoes WHERE bloco IS NOT NUL
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-
-  <!-- Favion /assets/ -->
-   <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
-
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
   <title>Repertório - Pagode do Basílio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -24,7 +22,7 @@ $blocos = $pdo->query("SELECT DISTINCT bloco FROM cancoes WHERE bloco IS NOT NUL
 <body class="bg-light">
 <div class="container-fluid">
   <div class="row">
-    
+
     <!-- Sidebar esquerda com blocos -->
     <div class="col-md-3 bg-white border-end vh-100 p-3 overflow-auto">
       <h5>📦 Organização dos Blocos</h5>
@@ -73,6 +71,7 @@ $blocos = $pdo->query("SELECT DISTINCT bloco FROM cancoes WHERE bloco IS NOT NUL
             <th>Título</th>
             <th>Trecho</th>
             <th>Intérprete</th>
+            <th>Tom</th>
             <th>Gênero / BPM</th>
             <th>Link</th>
             <th>Ações</th>
@@ -92,9 +91,10 @@ $blocos = $pdo->query("SELECT DISTINCT bloco FROM cancoes WHERE bloco IS NOT NUL
                 </span>
               </td>
               <td><?= htmlspecialchars($musica['interprete']) ?></td>
+              <td><?= htmlspecialchars($musica['tom']) ?></td>
               <td><?= htmlspecialchars($musica['genero_bpm']) ?></td>
               <td>
-                <?php if ($musica['link_referencia']): ?>
+                <?php if (!empty($musica['link_referencia'])): ?>
                   <a href="<?= htmlspecialchars($musica['link_referencia']) ?>" target="_blank">🔗</a>
                 <?php endif; ?>
               </td>
